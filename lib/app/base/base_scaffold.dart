@@ -56,6 +56,10 @@ abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
 
   T blocClass;
 
+  bool mountedBase = false;
+
+  late T bloc;
+
   @protected
   Future<bool> onBackPressed(BuildContext context) async {
     return true;
@@ -79,28 +83,104 @@ abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
 }
 
 class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
-    extends State<BaseScaffold<T>> {
+    extends State<BaseScaffold<T>> with WidgetsBindingObserver {
+  
 
-
+  // Statefull Standart Lifecycle
   @override
   void initState() {
     super.initState();
+    widget.mountedBase = mounted;
+    WidgetsBinding.instance!.addObserver(this);
+    debugPrint("Init State");
   }
 
   @override
   void didChangeDependencies() {
+    debugPrint("did change dependencies");
     super.didChangeDependencies();
   }
 
   @override
+  void deactivate() {
+    debugPrint("deactivate");
+    super.deactivate();
+  }
+
+  @override
   void didUpdateWidget(covariant BaseScaffold<T> oldWidget) {
+    debugPrint("did update widget : $oldWidget");
     super.didUpdateWidget(oldWidget);
   }
 
   @override
   void dispose() {
-    super.dispose();
     widget.blocClass.close();
+    WidgetsBinding.instance!.removeObserver(this);
+    widget.mountedBase = mounted;
+    debugPrint("dispose");
+    super.dispose();
+  }
+
+  // Widget Observer Lifecycle
+  @override
+  void didChangeAccessibilityFeatures() {
+    debugPrint("did change accesibility features");
+    super.didChangeAccessibilityFeatures();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    debugPrint("did change app lifecycle state : $state");
+    super.didChangeAppLifecycleState(state);
+  }
+
+  @override
+  void didChangeLocales(List<Locale>? locales) {
+    debugPrint("did change locales : $locales");
+    super.didChangeLocales(locales);
+  }
+
+  @override
+  void didChangeMetrics() {
+    debugPrint("did change metrics");
+    super.didChangeMetrics();
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    debugPrint("did change platform brightness");
+    super.didChangePlatformBrightness();
+  }
+
+  @override
+  Future<bool> didPopRoute() {
+    debugPrint("did pop route");
+    return super.didPopRoute();
+  }
+
+  @override
+  Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
+    debugPrint("did push route information : $routeInformation");
+    return super.didPushRouteInformation(routeInformation);
+  }
+
+  @override
+  Future<bool> didPushRoute(String route) {
+    debugPrint("did push route : $route");
+    return super.didPushRoute(route);
+  }
+
+  @override
+  void didChangeTextScaleFactor() {
+    debugPrint("did change text scale factor");
+    super.didChangeTextScaleFactor();
+  }
+
+  @override
+  void didHaveMemoryPressure() {
+    debugPrint("did have memory pressure");
+    super.didHaveMemoryPressure();
   }
 
   @override
