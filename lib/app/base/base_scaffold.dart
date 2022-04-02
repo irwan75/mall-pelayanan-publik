@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mall_pelayanan_publik/app/module/auth/login/bloc/login_bloc.dart';
+import 'package:flutter/foundation.dart';
 
 // ignore: must_be_immutable
 // abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
@@ -54,11 +54,9 @@ abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
     required this.blocClass,
   }) : super(key: key);
 
-  T blocClass;
+  final T blocClass;
 
   bool mountedBase = false;
-
-  late T bloc;
 
   @protected
   Future<bool> onBackPressed(BuildContext context) async {
@@ -84,32 +82,38 @@ abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
 
 class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
     extends State<BaseScaffold<T>> with WidgetsBindingObserver {
-  
-
   // Statefull Standart Lifecycle
   @override
   void initState() {
     super.initState();
     widget.mountedBase = mounted;
     WidgetsBinding.instance!.addObserver(this);
-    debugPrint("Init State");
+    if (kDebugMode) {
+      debugPrint("Init State");
+    }
   }
 
   @override
   void didChangeDependencies() {
-    debugPrint("did change dependencies");
+    if (kDebugMode) {
+      debugPrint("did change dependencies");
+    }
     super.didChangeDependencies();
   }
 
   @override
   void deactivate() {
-    debugPrint("deactivate");
+    if (kDebugMode) {
+      debugPrint("deactivate");
+    }
     super.deactivate();
   }
 
   @override
   void didUpdateWidget(covariant BaseScaffold<T> oldWidget) {
-    debugPrint("did update widget : $oldWidget");
+    if (kDebugMode) {
+      debugPrint("did update widget : $oldWidget");
+    }
     super.didUpdateWidget(oldWidget);
   }
 
@@ -118,73 +122,98 @@ class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
     widget.blocClass.close();
     WidgetsBinding.instance!.removeObserver(this);
     widget.mountedBase = mounted;
-    debugPrint("dispose");
+    if (kDebugMode) {
+      debugPrint("dispose");
+    }
     super.dispose();
   }
 
   // Widget Observer Lifecycle
   @override
   void didChangeAccessibilityFeatures() {
-    debugPrint("did change accesibility features");
+    if (kDebugMode) {
+      debugPrint("did change accesibility features");
+    }
     super.didChangeAccessibilityFeatures();
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    debugPrint("did change app lifecycle state : $state");
+    if (kDebugMode) {
+      debugPrint("did change app lifecycle state : $state");
+    }
     super.didChangeAppLifecycleState(state);
   }
 
   @override
   void didChangeLocales(List<Locale>? locales) {
-    debugPrint("did change locales : $locales");
+    if (kDebugMode) {
+      debugPrint("did change locales : $locales");
+    }
     super.didChangeLocales(locales);
   }
 
   @override
   void didChangeMetrics() {
-    debugPrint("did change metrics");
+    if (kDebugMode) {
+      debugPrint("did change metrics");
+    }
     super.didChangeMetrics();
   }
 
   @override
   void didChangePlatformBrightness() {
-    debugPrint("did change platform brightness");
+    if (kDebugMode) {
+      debugPrint("did change platform brightness");
+    }
     super.didChangePlatformBrightness();
   }
 
   @override
   Future<bool> didPopRoute() {
-    debugPrint("did pop route");
+    if (kDebugMode) {
+      debugPrint("did pop route");
+    }
     return super.didPopRoute();
   }
 
   @override
   Future<bool> didPushRouteInformation(RouteInformation routeInformation) {
-    debugPrint("did push route information : $routeInformation");
+    if (kDebugMode) {
+      debugPrint("did push route information : $routeInformation");
+    }
     return super.didPushRouteInformation(routeInformation);
   }
 
   @override
   Future<bool> didPushRoute(String route) {
-    debugPrint("did push route : $route");
+    if (kDebugMode) {
+      debugPrint("did push route : $route");
+    }
     return super.didPushRoute(route);
   }
 
   @override
   void didChangeTextScaleFactor() {
-    debugPrint("did change text scale factor");
+    if (kDebugMode) {
+      debugPrint("did change text scale factor");
+    }
     super.didChangeTextScaleFactor();
   }
 
   @override
   void didHaveMemoryPressure() {
-    debugPrint("did have memory pressure");
+    if (kDebugMode) {
+      debugPrint("did have memory pressure");
+    }
     super.didHaveMemoryPressure();
   }
 
   @override
   Widget build(BuildContext context) {
+    if (kDebugMode) {
+      debugPrint("build");
+    }
     return WillPopScope(
       onWillPop: () => widget.onBackPressed(context),
       child: BlocProvider<T>(

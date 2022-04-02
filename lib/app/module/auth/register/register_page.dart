@@ -10,6 +10,7 @@ import '../../../common_widget/text_form/default_text_field.dart';
 import '../../../res/colors_custom.dart';
 import '../../../res/sizes.dart';
 import '../../../res/styles.dart';
+import '../../../../generated/internationalization.dart';
 
 class RegisterPage extends BaseScaffold<RegisterBloc> {
    RegisterPage({Key? key}) : super(key: key, blocClass: RegisterBloc());
@@ -20,6 +21,7 @@ class RegisterPage extends BaseScaffold<RegisterBloc> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Text(AppTranslations.of(context).helloWorld),
                 const DefaultTextField(
                   hintText: 'NIK',
                   prefixIcon: Icons.abc,

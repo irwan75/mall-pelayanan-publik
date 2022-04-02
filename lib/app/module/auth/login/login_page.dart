@@ -6,6 +6,7 @@ import 'package:mall_pelayanan_publik/app/module/auth/login/bloc/login_bloc.dart
 import 'package:mall_pelayanan_publik/app/module/auth/register/register_page.dart';
 import 'package:mall_pelayanan_publik/app/module/dashboard/dashboard_page.dart';
 import 'package:mall_pelayanan_publik/app/res/colors_custom.dart';
+import 'package:mall_pelayanan_publik/generated/internationalization.dart';
 import 'package:shared/const/enum.dart';
 
 import '../../../base/base_platform_view.dart';
@@ -32,6 +33,7 @@ class LoginPage extends BaseScaffold<LoginBloc> {
                   return state.when(
                     initial: (value) => Column(
                       children: [
+                        Text(AppTranslations.of(context).helloWorld),
                         const DefaultTextField(
                           hintText: 'NIK',
                           prefixIcon: Icons.abc,

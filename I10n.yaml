@@ -1,0 +1,5 @@
+arb-dir: assets/languanges
+template-arb-file: strings_en.arb
+output-localization-file: translations.dart
+output-class: Translations
+output-dir: lib/generated
