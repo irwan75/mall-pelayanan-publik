@@ -51,10 +51,9 @@ abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
     extends StatefulWidget {
   BaseScaffold({
     Key? key,
-    required this.blocClass,
   }) : super(key: key);
 
-  final T blocClass;
+  late T blocClass = registerBloc();
 
   bool mountedBase = false;
 
@@ -65,6 +64,9 @@ abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
 
   @protected
   Widget? bodyScaffold(BuildContext context);
+
+  @protected
+  T registerBloc();
 
   @protected
   AppBar? appBarScaffold(BuildContext context) {
@@ -212,7 +214,7 @@ class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
   @override
   Widget build(BuildContext context) {
     if (kDebugMode) {
-      debugPrint("build");
+      debugPrint("build ${context.widget}");
     }
     return WillPopScope(
       onWillPop: () => widget.onBackPressed(context),

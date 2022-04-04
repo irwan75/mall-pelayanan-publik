@@ -11,7 +11,10 @@ import '../../common_widget/card/services_card.dart';
 import '../../common_widget/text_form/search_text_field.dart';
 
 class DashboardPage extends BaseScaffold<DashboardBloc> {
-  DashboardPage({Key? key}) : super(key: key, blocClass: DashboardBloc());
+  DashboardPage({Key? key}) : super(key: key);
+
+  @override
+  DashboardBloc registerBloc() => DashboardBloc();
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(
@@ -23,7 +26,10 @@ class DashboardPage extends BaseScaffold<DashboardBloc> {
                   title: 'okee',
                 ),
                 TextButton(
-                  onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage(),)),
+                  // onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage(),)),
+                  onPressed: () {
+                    blocClass.add(const DashboardEvent.started());
+                  },
                   child: const Text("Berita Lainnya >>>"),
                 ),
                 const SummaryHomeCard(),

@@ -18,8 +18,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$RegisterEventTearOff {
   const _$RegisterEventTearOff();
 
-  _Started started() {
-    return const _Started();
+  _Started started(BuildContext context) {
+    return _Started(
+      context,
+    );
   }
 }
 
@@ -28,19 +30,21 @@ const $RegisterEvent = _$RegisterEventTearOff();
 
 /// @nodoc
 mixin _$RegisterEvent {
+  BuildContext get context => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(BuildContext context) started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(BuildContext context)? started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(BuildContext context)? started,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,6 +64,10 @@ mixin _$RegisterEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $RegisterEventCopyWith<RegisterEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -67,6 +75,7 @@ abstract class $RegisterEventCopyWith<$Res> {
   factory $RegisterEventCopyWith(
           RegisterEvent value, $Res Function(RegisterEvent) then) =
       _$RegisterEventCopyWithImpl<$Res>;
+  $Res call({BuildContext context});
 }
 
 /// @nodoc
@@ -77,12 +86,26 @@ class _$RegisterEventCopyWithImpl<$Res>
   final RegisterEvent _value;
   // ignore: unused_field
   final $Res Function(RegisterEvent) _then;
+
+  @override
+  $Res call({
+    Object? context = freezed,
+  }) {
+    return _then(_value.copyWith(
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$StartedCopyWith<$Res> {
+abstract class _$StartedCopyWith<$Res> implements $RegisterEventCopyWith<$Res> {
   factory _$StartedCopyWith(_Started value, $Res Function(_Started) then) =
       __$StartedCopyWithImpl<$Res>;
+  @override
+  $Res call({BuildContext context});
 }
 
 /// @nodoc
@@ -93,51 +116,74 @@ class __$StartedCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
 
   @override
   _Started get _value => super._value as _Started;
+
+  @override
+  $Res call({
+    Object? context = freezed,
+  }) {
+    return _then(_Started(
+      context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Started implements _Started {
-  const _$_Started();
+  const _$_Started(this.context);
+
+  @override
+  final BuildContext context;
 
   @override
   String toString() {
-    return 'RegisterEvent.started()';
+    return 'RegisterEvent.started(context: $context)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Started);
+        (other.runtimeType == runtimeType &&
+            other is _Started &&
+            const DeepCollectionEquality().equals(other.context, context));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(context));
+
+  @JsonKey(ignore: true)
+  @override
+  _$StartedCopyWith<_Started> get copyWith =>
+      __$StartedCopyWithImpl<_Started>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(BuildContext context) started,
   }) {
-    return started();
+    return started(context);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(BuildContext context)? started,
   }) {
-    return started?.call();
+    return started?.call(context);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(BuildContext context)? started,
     required TResult orElse(),
   }) {
     if (started != null) {
-      return started();
+      return started(context);
     }
     return orElse();
   }
@@ -172,7 +218,14 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements RegisterEvent {
-  const factory _Started() = _$_Started;
+  const factory _Started(BuildContext context) = _$_Started;
+
+  @override
+  BuildContext get context;
+  @override
+  @JsonKey(ignore: true)
+  _$StartedCopyWith<_Started> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

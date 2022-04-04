@@ -7,7 +7,10 @@ import 'package:mall_pelayanan_publik/app/module/home/news/detail_news_page.dart
 import 'package:shared/const/dummy.dart';
 
 class NewsPage extends BaseScaffold<NewsBloc> {
-  NewsPage({Key? key}) : super(key: key, blocClass: NewsBloc());
+  NewsPage({Key? key}) : super(key: key);
+
+  @override
+  NewsBloc registerBloc() => NewsBloc();
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(

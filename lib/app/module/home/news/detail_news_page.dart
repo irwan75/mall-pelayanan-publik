@@ -5,7 +5,10 @@ import 'package:mall_pelayanan_publik/app/module/home/news/bloc/bloc/news_bloc.d
 import 'package:shared/const/dummy.dart';
 
 class DetailNewsPage extends BaseScaffold<NewsBloc> {
-  DetailNewsPage({Key? key}) : super(key: key, blocClass: NewsBloc());
+  DetailNewsPage({Key? key}) : super(key: key);
+
+  @override
+  NewsBloc registerBloc() => NewsBloc();
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(
@@ -18,7 +21,8 @@ class DetailNewsPage extends BaseScaffold<NewsBloc> {
                 color: Colors.black,
               ),
               const Text("Sabtu, 13 Maret 2021 19:34 WITA"),
-              const Text("Desa Kalilong, Kecamatan Liukang, Kab. Pangkep Makassar"),
+              const Text(
+                  "Desa Kalilong, Kecamatan Liukang, Kab. Pangkep Makassar"),
               const Text(Dummy.dummyLongText),
               const Text(Dummy.dummyLongText),
             ],

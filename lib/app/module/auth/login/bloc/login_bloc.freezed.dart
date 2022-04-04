@@ -24,8 +24,10 @@ class _$LoginEventTearOff {
     );
   }
 
-  _OnClickRegister onClickRegister() {
-    return const _OnClickRegister();
+  _OnClickRegister onClickRegister(BuildContext context) {
+    return _OnClickRegister(
+      context,
+    );
   }
 }
 
@@ -34,22 +36,24 @@ const $LoginEvent = _$LoginEventTearOff();
 
 /// @nodoc
 mixin _$LoginEvent {
+  BuildContext get context => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuildContext context) onClickLogin,
-    required TResult Function() onClickRegister,
+    required TResult Function(BuildContext context) onClickRegister,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(BuildContext context)? onClickLogin,
-    TResult Function()? onClickRegister,
+    TResult Function(BuildContext context)? onClickRegister,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuildContext context)? onClickLogin,
-    TResult Function()? onClickRegister,
+    TResult Function(BuildContext context)? onClickRegister,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +76,10 @@ mixin _$LoginEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $LoginEventCopyWith<LoginEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -79,6 +87,7 @@ abstract class $LoginEventCopyWith<$Res> {
   factory $LoginEventCopyWith(
           LoginEvent value, $Res Function(LoginEvent) then) =
       _$LoginEventCopyWithImpl<$Res>;
+  $Res call({BuildContext context});
 }
 
 /// @nodoc
@@ -88,13 +97,27 @@ class _$LoginEventCopyWithImpl<$Res> implements $LoginEventCopyWith<$Res> {
   final LoginEvent _value;
   // ignore: unused_field
   final $Res Function(LoginEvent) _then;
+
+  @override
+  $Res call({
+    Object? context = freezed,
+  }) {
+    return _then(_value.copyWith(
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$OnClickLoginCopyWith<$Res> {
+abstract class _$OnClickLoginCopyWith<$Res>
+    implements $LoginEventCopyWith<$Res> {
   factory _$OnClickLoginCopyWith(
           _OnClickLogin value, $Res Function(_OnClickLogin) then) =
       __$OnClickLoginCopyWithImpl<$Res>;
+  @override
   $Res call({BuildContext context});
 }
 
@@ -155,7 +178,7 @@ class _$_OnClickLogin implements _OnClickLogin {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuildContext context) onClickLogin,
-    required TResult Function() onClickRegister,
+    required TResult Function(BuildContext context) onClickRegister,
   }) {
     return onClickLogin(context);
   }
@@ -164,7 +187,7 @@ class _$_OnClickLogin implements _OnClickLogin {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(BuildContext context)? onClickLogin,
-    TResult Function()? onClickRegister,
+    TResult Function(BuildContext context)? onClickRegister,
   }) {
     return onClickLogin?.call(context);
   }
@@ -173,7 +196,7 @@ class _$_OnClickLogin implements _OnClickLogin {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuildContext context)? onClickLogin,
-    TResult Function()? onClickRegister,
+    TResult Function(BuildContext context)? onClickRegister,
     required TResult orElse(),
   }) {
     if (onClickLogin != null) {
@@ -217,17 +240,22 @@ class _$_OnClickLogin implements _OnClickLogin {
 abstract class _OnClickLogin implements LoginEvent {
   const factory _OnClickLogin(BuildContext context) = _$_OnClickLogin;
 
+  @override
   BuildContext get context;
+  @override
   @JsonKey(ignore: true)
   _$OnClickLoginCopyWith<_OnClickLogin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$OnClickRegisterCopyWith<$Res> {
+abstract class _$OnClickRegisterCopyWith<$Res>
+    implements $LoginEventCopyWith<$Res> {
   factory _$OnClickRegisterCopyWith(
           _OnClickRegister value, $Res Function(_OnClickRegister) then) =
       __$OnClickRegisterCopyWithImpl<$Res>;
+  @override
+  $Res call({BuildContext context});
 }
 
 /// @nodoc
@@ -240,54 +268,77 @@ class __$OnClickRegisterCopyWithImpl<$Res>
 
   @override
   _OnClickRegister get _value => super._value as _OnClickRegister;
+
+  @override
+  $Res call({
+    Object? context = freezed,
+  }) {
+    return _then(_OnClickRegister(
+      context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_OnClickRegister implements _OnClickRegister {
-  const _$_OnClickRegister();
+  const _$_OnClickRegister(this.context);
+
+  @override
+  final BuildContext context;
 
   @override
   String toString() {
-    return 'LoginEvent.onClickRegister()';
+    return 'LoginEvent.onClickRegister(context: $context)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _OnClickRegister);
+        (other.runtimeType == runtimeType &&
+            other is _OnClickRegister &&
+            const DeepCollectionEquality().equals(other.context, context));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(context));
+
+  @JsonKey(ignore: true)
+  @override
+  _$OnClickRegisterCopyWith<_OnClickRegister> get copyWith =>
+      __$OnClickRegisterCopyWithImpl<_OnClickRegister>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuildContext context) onClickLogin,
-    required TResult Function() onClickRegister,
+    required TResult Function(BuildContext context) onClickRegister,
   }) {
-    return onClickRegister();
+    return onClickRegister(context);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(BuildContext context)? onClickLogin,
-    TResult Function()? onClickRegister,
+    TResult Function(BuildContext context)? onClickRegister,
   }) {
-    return onClickRegister?.call();
+    return onClickRegister?.call(context);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuildContext context)? onClickLogin,
-    TResult Function()? onClickRegister,
+    TResult Function(BuildContext context)? onClickRegister,
     required TResult orElse(),
   }) {
     if (onClickRegister != null) {
-      return onClickRegister();
+      return onClickRegister(context);
     }
     return orElse();
   }
@@ -325,7 +376,14 @@ class _$_OnClickRegister implements _OnClickRegister {
 }
 
 abstract class _OnClickRegister implements LoginEvent {
-  const factory _OnClickRegister() = _$_OnClickRegister;
+  const factory _OnClickRegister(BuildContext context) = _$_OnClickRegister;
+
+  @override
+  BuildContext get context;
+  @override
+  @JsonKey(ignore: true)
+  _$OnClickRegisterCopyWith<_OnClickRegister> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
