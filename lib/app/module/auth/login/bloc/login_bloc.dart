@@ -27,9 +27,9 @@ class LoginBloc extends BaseBloc<LoginEvent, LoginState> {
 
   // late UserRepository userRepository;
 
-  final UserModule userModule = locator.get<UserModule>();
+  final UserModule userModule;
 
-  LoginBloc() : super(const _Initial(0)) {
+  LoginBloc(this.userModule) : super(const _Initial(0)) {
     on<_OnClickLogin>(_onClickLogin);
     on<_OnClickRegister>(_onClickRegister);
   }

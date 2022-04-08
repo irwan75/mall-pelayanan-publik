@@ -5,21 +5,209 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "mall_pelayanan_publik",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "mall_pelayanan_publik (profile mode)",
+            "name": "[dev] mall_pelayanan_publik",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "args": ["--dart-define=DEFINE_APP_NAME=[Dev] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.dev",
+                "--dart-define=FLAVOR=dev",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"]
         },
         {
-            "name": "mall_pelayanan_publik (release mode)",
+            "name": "[dev] mall_pelayanan_publik (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Dev] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.dev",
+                "--dart-define=FLAVOR=dev",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[dev] mall_pelayanan_publik (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Dev] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.dev",
+                "--dart-define=FLAVOR=dev",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[stg] mall_pelayanan_publik",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Stg] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.stg",
+                "--dart-define=FLAVOR=stg",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[stg] mall_pelayanan_publik (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Stg] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.stg",
+                "--dart-define=FLAVOR=stg",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[stg] mall_pelayanan_publik (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Stg] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.stg",
+                "--dart-define=FLAVOR=stg",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[prod] mall_pelayanan_publik",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=",
+                "--dart-define=FLAVOR=prod",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[prod] mall_pelayanan_publik (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=",
+                "--dart-define=FLAVOR=prod",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[prod] mall_pelayanan_publik (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=",
+                "--dart-define=FLAVOR=prod",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[dev-web] mall_pelayanan_publik (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Dev] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.dev",
+                "--dart-define=FLAVOR=dev",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[dev-web] mall_pelayanan_publik (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Dev] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.dev",
+                "--dart-define=FLAVOR=dev",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[stg-web] mall_pelayanan_publik (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Stg] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.stg",
+                "--dart-define=FLAVOR=stg",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[stg-web] mall_pelayanan_publik (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Stg] Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=.stg",
+                "--dart-define=FLAVOR=stg",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[prod-web] mall_pelayanan_publik (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=",
+                "--dart-define=FLAVOR=prod",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
+        },
+        {
+            "name": "[prod-web] mall_pelayanan_publik (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=Mall Pelayanan Publik",
+                "--dart-define=DEFINE_APP_SUFFIX=",
+                "--dart-define=FLAVOR=prod",
+                "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
+                "--dart-define=VERSION_CODE=1",
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
         }
     ]
 }

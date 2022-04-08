@@ -13,6 +13,7 @@ class AppPages {
   static const initial = Routes.LOGIN;
 
   static final GoRouter router = GoRouter(
+      urlPathStrategy: UrlPathStrategy.path,
       observers: [NavObserver()],
       initialLocation: initial,
       routes: <GoRoute>[

@@ -15,9 +15,9 @@ part 'register_state.dart';
 part 'register_bloc.freezed.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
-  final UserModule userModule = locator.get<UserModule>();
+  final UserModule userModule;
 
-  RegisterBloc() : super(const _Initial()) {
+  RegisterBloc(this.userModule) : super(const _Initial()) {
     on<RegisterEvent>((event, emit) {
       final User user = User('name', 'bornDate', 'male');
       debugPrint(userModule.login(LoginMedia.byCloudDataSource(user)));

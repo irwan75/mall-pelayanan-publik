@@ -13,12 +13,18 @@ part 'dashboard_state.dart';
 part 'dashboard_bloc.freezed.dart';
 
 class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
-  final UserModule userModule = locator.get<UserModule>();
+  final UserModule userModule;
 
-  DashboardBloc() : super(const _Initial()) {
+  DashboardBloc(this.userModule) : super(const _Initial()) {
     on<DashboardEvent>((event, emit) {
       final User user = User('name', 'bornDate', 'male');
       debugPrint(userModule.login(LoginMedia.byFirebaseDataSource(user)));
     });
+  }
+
+  ValueNotifier<int> selectedDestination = ValueNotifier<int>(0);
+
+  void selectDestination(int index) {
+    selectedDestination.value = index;
   }
 }

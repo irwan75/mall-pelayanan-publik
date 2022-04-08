@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mall_pelayanan_publik/app/routes/app_pages.dart';
 
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:mall_pelayanan_publik/config/cubit/settings_cubit.dart';
 import 'config/observer/app_observer.dart';
 import 'package:flutter_gen/gen_l10n/translations.dart';
 import './di/dependency_injector.dart' as di;
 // import 'package:flutter_driver/driver_extension.dart';
 
-double maxWidthSmartphone = 481;
-double maxWidthTablet = 1024;
+const double maxWidthSmartphone = 481;
+const double maxWidthTablet = 1024;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   // enableFlutterDriverExtension();
   await di.init('');
   BlocOverrides.runZoned(

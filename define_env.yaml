@@ -1,0 +1,28 @@
+define_env:
+  file_path: lib
+  class: Env
+  fields:
+    DEFINE_APP_NAME:
+      type: String
+      default: "Mall Pelayanan Publik"
+    DEFINE_APP_SUFFIX:
+      type: String
+      default: 
+    FLAVOR:
+      type: enum
+      enum:
+        class: MyEnum
+        values:
+          - dev
+          - stg
+          - prod
+        names:
+          developer: dev
+          staging: stg
+          production: prod
+    BASE_URL:
+      type: String        
+    VERSION_CODE:
+      type: int
+    VERSION_NAME:
+      type: String    

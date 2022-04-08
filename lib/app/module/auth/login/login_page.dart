@@ -1,3 +1,4 @@
+import 'package:data/modules/user_module.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,6 +11,7 @@ import 'package:mall_pelayanan_publik/config/cubit/settings_cubit.dart';
 import 'package:mall_pelayanan_publik/generated/app_translations.dart';
 import 'package:shared/const/enum.dart';
 
+import '../../../../di/dependency_injector.dart';
 import '../../../base/base_platform_view.dart';
 import '../../../common_widget/button/circular_button.dart';
 import '../../../common_widget/text_form/default_text_field.dart';
@@ -21,7 +23,7 @@ class LoginPage extends BaseScaffold<LoginBloc> {
   LoginPage({Key? key}) : super(key: key);
 
   @override
-  LoginBloc registerBloc() => LoginBloc();
+  LoginBloc registerBloc() => LoginBloc(locator.get<UserModule>());
 
   @override
   Widget? bodyScaffold(BuildContext context) {
