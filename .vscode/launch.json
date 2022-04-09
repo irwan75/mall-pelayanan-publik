@@ -14,7 +14,8 @@
                 "--dart-define=FLAVOR=dev",
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
-                "--dart-define=VERSION_NAME=1.0.0"
+                "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/dev_ic_launcher"
             ]
         },
         {
@@ -28,7 +29,8 @@
                 "--dart-define=FLAVOR=dev",
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
-                "--dart-define=VERSION_NAME=1.0.0"
+                "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/dev_ic_launcher"
             ]
         },
         {
@@ -43,6 +45,7 @@
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
                 "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/dev_ic_launcher",
                 "--obfuscate",
                 "--split-debug-info=build/app/outputs/logs"
             ]
@@ -57,7 +60,8 @@
                 "--dart-define=FLAVOR=stg",
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
-                "--dart-define=VERSION_NAME=1.0.0"
+                "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/stg_ic_launcher"
             ]
         },
         {
@@ -71,7 +75,8 @@
                 "--dart-define=FLAVOR=stg",
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
-                "--dart-define=VERSION_NAME=1.0.0"
+                "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/stg_ic_launcher"
             ]
         },
         {
@@ -86,6 +91,7 @@
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
                 "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/stg_ic_launcher",
                 "--obfuscate",
                 "--split-debug-info=build/app/outputs/logs"
             ]
@@ -100,7 +106,8 @@
                 "--dart-define=FLAVOR=prod",
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
-                "--dart-define=VERSION_NAME=1.0.0"
+                "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/ic_launcher"
             ]
         },
         {
@@ -114,7 +121,8 @@
                 "--dart-define=FLAVOR=prod",
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
-                "--dart-define=VERSION_NAME=1.0.0"
+                "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/ic_launcher"
             ]
         },
         {
@@ -129,6 +137,7 @@
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
                 "--dart-define=VERSION_NAME=1.0.0",
+                "--dart-define=ICON_LAUNCHER=@mipmap/ic_launcher",
                 "--obfuscate",
                 "--split-debug-info=build/app/outputs/logs"
             ]
