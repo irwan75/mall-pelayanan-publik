@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
-import 'package:mall_pelayanan_publik/app/module/home/news/bloc/bloc/news_bloc.dart';
 import 'package:shared/const/dummy.dart';
+
+import 'bloc/news_bloc.dart';
 
 class DetailNewsPage extends BaseScaffold<NewsBloc> {
   DetailNewsPage({Key? key}) : super(key: key);

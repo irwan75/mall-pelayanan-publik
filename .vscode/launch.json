@@ -8,12 +8,14 @@
             "name": "[dev] mall_pelayanan_publik",
             "request": "launch",
             "type": "dart",
-            "args": ["--dart-define=DEFINE_APP_NAME=[Dev] Mall Pelayanan Publik",
+            "args": [
+                "--dart-define=DEFINE_APP_NAME=[Dev] Mall Pelayanan Publik",
                 "--dart-define=DEFINE_APP_SUFFIX=.dev",
                 "--dart-define=FLAVOR=dev",
                 "--dart-define=BASE_URL=https://padichain-api.tcd-dev.id/",
                 "--dart-define=VERSION_CODE=1",
-                "--dart-define=VERSION_NAME=1.0.0"]
+                "--dart-define=VERSION_NAME=1.0.0"
+            ]
         },
         {
             "name": "[dev] mall_pelayanan_publik (profile mode)",

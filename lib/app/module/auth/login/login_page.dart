@@ -15,6 +15,7 @@ import '../../../../di/dependency_injector.dart';
 import '../../../base/base_platform_view.dart';
 import '../../../common_widget/button/circular_button.dart';
 import '../../../common_widget/text_form/default_text_field.dart';
+import '../../../general_bloc/cart_counter/cart_counter_cubit.dart';
 import '../../../res/sizes.dart';
 import '../../../res/styles.dart';
 
@@ -76,6 +77,13 @@ class LoginPage extends BaseScaffold<LoginBloc> {
                                   image: NetworkImage(
                                       'https://previews.123rf.com/images/fordzolo/fordzolo1506/fordzolo150600296/41026708-ejemplo-de-texto-sello-blanco-en-backgroud-roja.jpg'))),
                         ),
+                        Builder(
+                          builder: (context) {
+                            final cartCounter =
+                                context.watch<CartCounterCubit>().state;
+                            return Text(cartCounter.toString());
+                          },
+                        ),
                         CircularButton(
                             textButton: 'Masuk',
                             paddingVertical: Sizes.sizePaddingVerticalButton,
@@ -84,6 +92,7 @@ class LoginPage extends BaseScaffold<LoginBloc> {
                             //     .read<LoginBloc>()
                             //     .add(const LoginEvent.onClickLogin()),
                             onTap: () {
+                              context.read<CartCounterCubit>().updateValue();
                               // bloc.add(LoginEvent.onClickLogin(context));
                             }
 

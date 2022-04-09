@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
 import 'package:mall_pelayanan_publik/app/common_widget/card/list_news.dart';
-import 'package:mall_pelayanan_publik/app/module/home/news/bloc/bloc/news_bloc.dart';
 import 'package:mall_pelayanan_publik/app/module/home/news/detail_news_page.dart';
 import 'package:shared/const/dummy.dart';
+
+import 'bloc/news_bloc.dart';
 
 class NewsPage extends BaseScaffold<NewsBloc> {
   NewsPage({Key? key}) : super(key: key);

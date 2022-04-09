@@ -8,7 +8,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mall_pelayanan_publik/di/dependency_injector.dart';
 
-import '../../../../../routes/app_pages.dart';
+import '../../../../routes/app_pages.dart';
 
 part 'register_event.dart';
 part 'register_state.dart';

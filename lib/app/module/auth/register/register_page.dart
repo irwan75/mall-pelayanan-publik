@@ -1,17 +1,20 @@
 import 'package:data/modules/user_module.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
-import 'package:mall_pelayanan_publik/app/module/auth/register/bloc/bloc/register_bloc.dart';
+import 'package:mall_pelayanan_publik/app/module/auth/login/bloc/login_bloc.dart';
 import 'package:shared/const/enum.dart';
 import '../../../../di/dependency_injector.dart';
 import '../../../common_widget/button/circular_button.dart';
 import '../../../common_widget/text_form/default_text_field.dart';
+import '../../../general_bloc/cart_counter/cart_counter_cubit.dart';
 import '../../../res/colors_custom.dart';
 import '../../../res/sizes.dart';
 import '../../../res/styles.dart';
 import '../../../../generated/app_translations.dart';
+import 'bloc/register_bloc.dart';
 
 class RegisterPage extends BaseScaffold<RegisterBloc> {
   RegisterPage({Key? key}) : super(key: key);
@@ -62,8 +65,9 @@ class RegisterPage extends BaseScaffold<RegisterBloc> {
                 paddingVertical: Sizes.sizePaddingVerticalButton,
                 sizeWidth: SizeWidth.max,
                 onTap: () {
+                  context.read<CartCounterCubit>().updateValue();
                   // context.read<SettingsCubit>().changeLanguanges('id');
-                  blocClass.add(RegisterEvent.started(context));
+                  // blocClass.add(RegisterEvent.started(context));
                   // MyApp.setLocale(context, const Locale('id'));
                 },
               ),
