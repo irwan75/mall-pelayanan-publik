@@ -31,6 +31,26 @@ run_app_prod_profile:
 run_app_prod_release:
 	flutter run --release $(ENV_PROD)
 
+build_apk_stg:
+	flutter run $(ENV_STG)
+
+build_apk_prod:
+	flutter run $(ENV_PROD)
+
+build_appbundle_prod:
+	flutter run $(ENV_PROD)
+
+build_ios_stg:
+	cd ios
+	pod install
+	flutter run $(ENV_PROD)
+
+build_ios_prod:
+	cd ios
+	pod install
+	flutter run $(ENV_PROD)
+
+
 
 
 run_web_dev_profile:

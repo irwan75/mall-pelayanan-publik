@@ -1,0 +1,16 @@
+//
+//  Defineenvironment-defaults.xcconfig
+//  Runner
+//
+//  Created by apple on 09/04/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+DEFINE_APP_NAME="[Dev] Mall Pelayanan Publik"
+DEFINE_APP_SUFFIX=".dev"
+FLAVOR=dev
+BASE_URL="https://padichain-api.tcd-dev.id/"
+VERSION_CODE=1
+VERSION_NAME="1.0.0"
