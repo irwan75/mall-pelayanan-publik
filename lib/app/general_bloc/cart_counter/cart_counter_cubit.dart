@@ -1,7 +1,7 @@
-import 'package:bloc/bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:isolate';
 
-part 'cart_counter_state.dart';
+import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 
 class CartCounterCubit extends Cubit<int> {
   CartCounterCubit() : super(0);
