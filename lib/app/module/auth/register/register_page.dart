@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
-import 'package:mall_pelayanan_publik/app/module/auth/login/bloc/login_bloc.dart';
 import 'package:shared/const/enum.dart';
 import '../../../../di/dependency_injector.dart';
 import '../../../common_widget/button/circular_button.dart';
@@ -17,10 +16,10 @@ import '../../../../generated/app_translations.dart';
 import 'bloc/register_bloc.dart';
 
 class RegisterPage extends BaseScaffold<RegisterBloc> {
-  RegisterPage({Key? key}) : super(key: key);
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  RegisterBloc registerBloc() => RegisterBloc(locator.get<UserModule>());
+  RegisterBloc blocClass() => RegisterBloc(locator.get<UserModule>());
 
   @override
   Widget? bodyScaffold(BuildContext context) {

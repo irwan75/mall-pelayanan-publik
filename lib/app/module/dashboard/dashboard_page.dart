@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
 import 'package:mall_pelayanan_publik/app/common_widget/card/summary_home_card.dart';
-import 'package:mall_pelayanan_publik/app/module/home/news/news_page.dart';
 
 import '../../../di/dependency_injector.dart';
 import '../../common_widget/botom_nav/bottom_nav_book_count.dart';
@@ -13,10 +12,10 @@ import '../../common_widget/text_form/search_text_field.dart';
 import 'bloc/dashboard_bloc.dart';
 
 class DashboardPage extends BaseScaffold<DashboardBloc> {
-  DashboardPage({Key? key}) : super(key: key);
+  const DashboardPage({Key? key}) : super(key: key);
 
   @override
-  DashboardBloc registerBloc() => DashboardBloc(locator.get<UserModule>());
+  DashboardBloc blocClass() => DashboardBloc(locator.get<UserModule>());
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(
@@ -30,7 +29,7 @@ class DashboardPage extends BaseScaffold<DashboardBloc> {
                 TextButton(
                   // onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage(),)),
                   onPressed: () {
-                    blocClass.add(const DashboardEvent.started());
+                    blocClass().add(const DashboardEvent.started());
                   },
                   child: const Text("Berita Lainnya >>>"),
                 ),
@@ -75,5 +74,5 @@ class DashboardPage extends BaseScaffold<DashboardBloc> {
       );
 
   @override
-  Widget? bottomNavigationBar(BuildContext context) => BottomNavBookCount();
+  Widget? bottomNavigationBar(BuildContext context) => const BottomNavBookCount();
 }

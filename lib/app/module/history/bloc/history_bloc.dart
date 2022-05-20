@@ -7,21 +7,16 @@ part 'history_bloc.freezed.dart';
 
 class HistoryBloc extends Bloc<HistoryEvent, HistoryState> {
   HistoryBloc() : super(const _Loading()) {
-    on<HistoryEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    on<HistoryEvent>((event, emit) {});
   }
 
   @override
   void onChange(Change<HistoryState> change) {
-    // TODO: implement onChange
     super.onChange(change);
   }
-  
+
   @override
   void onError(Object error, StackTrace stackTrace) {
-    // TODO: implement onError
     super.onError(error, stackTrace);
   }
-
 }

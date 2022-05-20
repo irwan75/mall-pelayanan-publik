@@ -5,10 +5,10 @@ import 'package:mall_pelayanan_publik/app/common_widget/text_form/search_text_fi
 import 'package:mall_pelayanan_publik/app/module/history/bloc/history_bloc.dart';
 
 class HistoryPage extends BaseScaffold<HistoryBloc> {
-  HistoryPage({Key? key}) : super(key: key);
+  const HistoryPage({Key? key}) : super(key: key);
 
   @override
-  HistoryBloc registerBloc() => HistoryBloc();
+  HistoryBloc blocClass() => HistoryBloc();
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(
         smartphoneView: Column(

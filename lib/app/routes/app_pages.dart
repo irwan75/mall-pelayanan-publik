@@ -10,7 +10,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = Routes.LOGIN;
+  static const initial = Routes.login;
 
   static final GoRouter router = GoRouter(
       urlPathStrategy: UrlPathStrategy.path,
@@ -18,19 +18,22 @@ class AppPages {
       initialLocation: initial,
       routes: <GoRoute>[
         GoRoute(
-          path: _Paths.LOGIN,
-          builder: (BuildContext context, GoRouterState state) => LoginPage(),
+          path: _Paths.login,
+          builder: (BuildContext context, GoRouterState state) =>
+              const LoginPage(),
         ),
         GoRoute(
-          path: _Paths.REGISTER,
+          path: _Paths.register,
           builder: (BuildContext context, GoRouterState state) =>
-              RegisterPage(),
+              const RegisterPage(),
         ),
         GoRoute(
-          path: _Paths.DASHBOARD,
+          path: _Paths.dashboard,
           builder: (BuildContext context, GoRouterState state) =>
-              DashboardPage(),
+              const DashboardPage(),
         ),
       ],
-      redirect: (state) {});
+      redirect: (state) {
+        return null;
+      });
 }

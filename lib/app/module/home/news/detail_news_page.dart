@@ -6,10 +6,10 @@ import 'package:shared/const/dummy.dart';
 import 'bloc/news_bloc.dart';
 
 class DetailNewsPage extends BaseScaffold<NewsBloc> {
-  DetailNewsPage({Key? key}) : super(key: key);
+  const DetailNewsPage({Key? key}) : super(key: key);
 
   @override
-  NewsBloc registerBloc() => NewsBloc();
+  NewsBloc blocClass() => NewsBloc();
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(

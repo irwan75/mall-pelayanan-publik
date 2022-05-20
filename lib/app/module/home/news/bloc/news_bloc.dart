@@ -6,9 +6,7 @@ part 'news_state.dart';
 part 'news_bloc.freezed.dart';
 
 class NewsBloc extends Bloc<NewsEvent, NewsState> {
-  NewsBloc() : super(_Initial()) {
-    on<NewsEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+  NewsBloc() : super(const _Initial()) {
+    on<NewsEvent>((event, emit) {});
   }
 }

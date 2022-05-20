@@ -32,5 +32,6 @@ class MyEnum {
   bool get isDev => this == dev;
   bool get isStg => this == stg;
   bool get isProd => this == prod;
+  @override
   String toString() => 'MyEnum.$value';
 }

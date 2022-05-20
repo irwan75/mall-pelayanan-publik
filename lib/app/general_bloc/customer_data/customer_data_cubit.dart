@@ -5,7 +5,7 @@ part 'customer_data_state.dart';
 part 'customer_data_cubit.freezed.dart';
 
 class CustomerDataCubit extends Cubit<CustomerDataState> {
-  CustomerDataCubit() : super(CustomerDataState.initial());
+  CustomerDataCubit() : super(const CustomerDataState.initial());
 
   // void updateValue() {
   //   state.when(

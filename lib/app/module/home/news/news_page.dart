@@ -8,10 +8,10 @@ import 'package:shared/const/dummy.dart';
 import 'bloc/news_bloc.dart';
 
 class NewsPage extends BaseScaffold<NewsBloc> {
-  NewsPage({Key? key}) : super(key: key);
+  const NewsPage({Key? key}) : super(key: key);
 
   @override
-  NewsBloc registerBloc() => NewsBloc();
+  NewsBloc blocClass() => NewsBloc();
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(
@@ -44,7 +44,7 @@ class NewsPage extends BaseScaffold<NewsBloc> {
                   ontap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DetailNewsPage(),
+                      builder: (context) => const DetailNewsPage(),
                     ),
                   ),
                 ),

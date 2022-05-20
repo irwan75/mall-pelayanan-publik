@@ -47,6 +47,7 @@ dependencies:
   go_router: ^3.0.6
   intl: ^0.17.0
   get_it: ^7.2.0
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:

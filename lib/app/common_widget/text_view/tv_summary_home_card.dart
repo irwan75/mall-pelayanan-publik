@@ -20,12 +20,12 @@ class TvSummaryHomeCard extends StatelessWidget {
         Text(
           "$value",
           style: Styles.textView.textView
-              .copyWith(fontSize: Sizes.sizesFont.sizesDefault_x),
+              .copyWith(fontSize: Sizes.sizesFont.sizesDefaultX),
         ),
         Text(
           subtitle,
           style: Styles.textView.textView
-              .copyWith(fontSize: Sizes.sizesFont.sizesDefault_x),
+              .copyWith(fontSize: Sizes.sizesFont.sizesDefaultX),
         ),
       ],
     );

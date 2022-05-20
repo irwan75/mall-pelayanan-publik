@@ -1,19 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:data/modules/user_module.dart';
-import 'package:data/repository/user/sealed/login_sealed.dart';
 import 'package:data/repository/user/sealed/register_sealed.dart';
-import 'package:data/repository/user/source/cloud_data_source.dart';
-import 'package:data/repository/user/user_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mall_pelayanan_publik/app/base/base_bloc.dart';
-import 'package:mall_pelayanan_publik/app/module/auth/register/register_page.dart';
 import 'package:mall_pelayanan_publik/app/routes/app_pages.dart';
-import 'package:data/repository/user/source/user_source.dart';
 import 'package:data/models/request/user.dart';
-
-import '../../../../../di/dependency_injector.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';
@@ -42,8 +35,8 @@ class LoginBloc extends BaseBloc<LoginEvent, LoginState> {
     // navigatePush(event.context, RegisterPage());
     // GoRouter.of(event.context).go(Routes.REGISTER);
     // event.context.push(Routes.REGISTER);
-    final User user = User('name', 'bornDate', 'male');
-    debugPrint(userModule.login(LoginMedia.byCloudDataSource(user)));
+    // final User user = User('name', 'bornDate', 'male');
+    // debugPrint(userModule.login(LoginMedia.byCloudDataSource(user)));
     // userRepository = CloudDataSource();
     // userModule = UserModule(userRepository: CloudDataSource());
     // debugPrint(userModule.login(user));
@@ -58,6 +51,6 @@ class LoginBloc extends BaseBloc<LoginEvent, LoginState> {
     // userRepository = LocalDataSource();
     // userModule = UserModule(userRepository: LocalDataSource());
     // debugPrint(userModule.register(users));
-    event.context.push(Routes.REGISTER);
+    event.context.push(Routes.register);
   }
 }
