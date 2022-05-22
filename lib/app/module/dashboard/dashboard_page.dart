@@ -1,10 +1,9 @@
-import 'package:data/modules/user_module.dart';
+import 'package:data/enum/enum_general.dart';
 import 'package:flutter/material.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
 import 'package:mall_pelayanan_publik/app/common_widget/card/summary_home_card.dart';
 
-import '../../../di/dependency_injector.dart';
 import '../../common_widget/botom_nav/bottom_nav_book_count.dart';
 import '../../common_widget/card/news_slider_home_card.dart';
 import '../../common_widget/card/services_card.dart';
@@ -12,13 +11,14 @@ import '../../common_widget/text_form/search_text_field.dart';
 import 'bloc/dashboard_bloc.dart';
 
 class DashboardPage extends BaseScaffold<DashboardBloc> {
-  const DashboardPage({Key? key}) : super(key: key);
-
-  @override
-  DashboardBloc blocClass() => DashboardBloc(locator.get<UserModule>());
+  final PlatformView? platformWidgetTest;
+  const DashboardPage(
+      {Key? key, required DashboardBloc dashboardBloc, this.platformWidgetTest})
+      : super(key: key, blocClass: dashboardBloc);
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(
+        platformWidgetTest: platformWidgetTest,
         smartphoneView: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -29,7 +29,7 @@ class DashboardPage extends BaseScaffold<DashboardBloc> {
                 TextButton(
                   // onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage(),)),
                   onPressed: () {
-                    blocClass().add(const DashboardEvent.started());
+                    blocClass.add(const DashboardEvent.started());
                   },
                   child: const Text("Berita Lainnya >>>"),
                 ),
@@ -74,5 +74,6 @@ class DashboardPage extends BaseScaffold<DashboardBloc> {
       );
 
   @override
-  Widget? bottomNavigationBar(BuildContext context) => const BottomNavBookCount();
+  Widget? bottomNavigationBar(BuildContext context) =>
+      const BottomNavBookCount();
 }

@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:data/enum/enum_general.dart';
 
 class BasePlatformView extends StatelessWidget {
   final Widget? tinySmartphoneView;
   final Widget? smartphoneView;
   final Widget? tabletView;
   final Widget? desktopView;
+  final PlatformView? platformWidgetTest;
 
   const BasePlatformView({
     Key? key,
@@ -12,6 +14,7 @@ class BasePlatformView extends StatelessWidget {
     this.smartphoneView,
     this.tabletView,
     this.desktopView,
+    this.platformWidgetTest,
   }) : super(key: key);
 
   static const double maxHeightTinySmartphone = 668;
@@ -47,18 +50,30 @@ class BasePlatformView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxHeight < maxHeightTinySmartphone) {
-          return tinySmartphoneView ?? Container();
-        } else if (constraints.maxWidth < maxWidthSmartphone) {
-          return smartphoneView ?? Container();
-        } else if (constraints.maxWidth < maxWidthTablet) {
-          return tabletView ?? Container();
-        } else {
-          return desktopView ?? Container();
+    return LayoutBuilder(builder: (context, constraints) {
+      if (platformWidgetTest != null) {
+        switch (platformWidgetTest) {
+          case PlatformView.TINYMOBILE:
+            return tinySmartphoneView ?? Container();
+          case PlatformView.MOBILE:
+            return smartphoneView ?? Container();
+          case PlatformView.TABLET:
+            return tabletView ?? Container();
+          case PlatformView.DESKTOP:
+            return desktopView ?? Container();
+          default:
+            return tinySmartphoneView ?? Container();
         }
-      },
-    );
+      }
+      if (constraints.maxHeight < maxHeightTinySmartphone) {
+        return tinySmartphoneView ?? Container();
+      } else if (constraints.maxWidth < maxWidthSmartphone) {
+        return smartphoneView ?? Container();
+      } else if (constraints.maxWidth < maxWidthTablet) {
+        return tabletView ?? Container();
+      } else {
+        return desktopView ?? Container();
+      }
+    });
   }
 }

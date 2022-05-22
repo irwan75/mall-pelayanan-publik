@@ -1,11 +1,10 @@
-import 'package:data/modules/user_module.dart';
+import 'package:data/enum/enum_general.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
 import 'package:shared/const/enum.dart';
-import '../../../../di/dependency_injector.dart';
 import '../../../common_widget/button/circular_button.dart';
 import '../../../common_widget/text_form/default_text_field.dart';
 import '../../../general_bloc/cart_counter/cart_counter_cubit.dart';
@@ -16,14 +15,15 @@ import '../../../../generated/app_translations.dart';
 import 'bloc/register_bloc.dart';
 
 class RegisterPage extends BaseScaffold<RegisterBloc> {
-  const RegisterPage({Key? key}) : super(key: key);
-
-  @override
-  RegisterBloc blocClass() => RegisterBloc(locator.get<UserModule>());
+  final PlatformView? platformWidgetTest;
+  const RegisterPage(
+      {Key? key, required RegisterBloc registerBloc, this.platformWidgetTest})
+      : super(key: key, blocClass: registerBloc);
 
   @override
   Widget? bodyScaffold(BuildContext context) {
     return BasePlatformView(
+      platformWidgetTest: PlatformView.MOBILE,
       smartphoneView: SafeArea(
         child: SingleChildScrollView(
           child: Column(

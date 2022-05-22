@@ -1,3 +1,4 @@
+import 'package:data/enum/enum_general.dart';
 import 'package:flutter/material.dart';
 import 'package:mall_pelayanan_publik/app/base/base_platform_view.dart';
 import 'package:mall_pelayanan_publik/app/base/base_scaffold.dart';
@@ -8,13 +9,16 @@ import 'package:shared/const/dummy.dart';
 import 'bloc/news_bloc.dart';
 
 class NewsPage extends BaseScaffold<NewsBloc> {
-  const NewsPage({Key? key}) : super(key: key);
-
-  @override
-  NewsBloc blocClass() => NewsBloc();
+  final PlatformView? platformWidgetTest;
+  const NewsPage({
+    Key? key,
+    required NewsBloc newsBloc,
+    this.platformWidgetTest,
+  }) : super(key: key, blocClass: newsBloc);
 
   @override
   Widget? bodyScaffold(BuildContext context) => BasePlatformView(
+        platformWidgetTest: platformWidgetTest,
         smartphoneView: Column(
           children: [
             SingleChildScrollView(
@@ -44,7 +48,8 @@ class NewsPage extends BaseScaffold<NewsBloc> {
                   ontap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const DetailNewsPage(),
+                      builder: (context) =>
+                          DetailNewsPage(newsBloc: NewsBloc()),
                     ),
                   ),
                 ),

@@ -4,17 +4,14 @@ import 'package:flutter/foundation.dart';
 
 abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
     extends StatefulWidget {
+  final T blocClass;
   const BaseScaffold({
     Key? key,
+    required this.blocClass,
   }) : super(key: key);
 
   @protected
-  T blocClass();
-
-  @protected
-  Future<bool> onBackPressed(
-    BuildContext context,
-  ) async {
+  Future<bool> onBackPressed(BuildContext context) async {
     return true;
   }
 
@@ -82,7 +79,7 @@ class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
   void dispose() {
     // widget.mountedBase = mounted;
     WidgetsBinding.instance!.removeObserver(this);
-    widget.blocClass().close();
+    widget.blocClass.close();
     if (kDebugMode) {
       debugPrint("dispose");
     }
@@ -182,7 +179,7 @@ class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
     return WillPopScope(
       onWillPop: () => widget.onBackPressed(context),
       child: BlocProvider<T>(
-        create: (context) => widget.blocClass(),
+        create: (context) => widget.blocClass,
         child: Scaffold(
           body: widget.bodyScaffold(context),
           appBar: widget.appBarScaffold(context),

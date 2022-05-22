@@ -1,4 +1,4 @@
-import 'package:data/modules/user_module.dart';
+import 'package:data/enum/enum_general.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,7 +8,6 @@ import 'package:mall_pelayanan_publik/app/res/colors_custom.dart';
 import 'package:mall_pelayanan_publik/generated/app_translations.dart';
 import 'package:shared/const/enum.dart';
 
-import '../../../../di/dependency_injector.dart';
 import '../../../base/base_platform_view.dart';
 import '../../../common_widget/button/circular_button.dart';
 import '../../../common_widget/custom_painter/example_shape.dart';
@@ -19,14 +18,15 @@ import '../../../res/styles.dart';
 
 // ignore: must_be_immutable
 class LoginPage extends BaseScaffold<LoginBloc> {
-  const LoginPage({Key? key}) : super(key: key);
-
-  @override
-  LoginBloc blocClass() => LoginBloc(locator.get<UserModule>());
+  final PlatformView? platformWidgetTest;
+  const LoginPage(
+      {Key? key, required LoginBloc loginBloc, this.platformWidgetTest})
+      : super(key: key, blocClass: loginBloc);
 
   @override
   Widget? bodyScaffold(BuildContext context) {
     return BasePlatformView(
+      platformWidgetTest: PlatformView.MOBILE,
       smartphoneView: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -91,7 +91,7 @@ class LoginPage extends BaseScaffold<LoginBloc> {
                             // .add(LoginEvent.onClickLogin(context)),
                             onTap: () {
                               // context.read<CartCounterCubit>().updateValue();
-                              blocClass().add(LoginEvent.onClickLogin(context));
+                              blocClass.add(LoginEvent.onClickLogin(context));
                             }
 
                             // Navigator.push(
@@ -114,7 +114,7 @@ class LoginPage extends BaseScaffold<LoginBloc> {
                                 ),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () async {
-                                    blocClass().add(LoginEvent.onClickRegister(
+                                    blocClass.add(LoginEvent.onClickRegister(
                                         contextBloc));
                                   },
                               ),

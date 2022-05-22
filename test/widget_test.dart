@@ -5,26 +5,42 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:data/enum/enum_general.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mall_pelayanan_publik/app/module/history/bloc/history_bloc.dart';
+import 'package:mall_pelayanan_publik/app/module/history/history_page.dart';
 
-import 'package:mall_pelayanan_publik/main.dart';
+class HistoryPageImpl extends StatelessWidget {
+  const HistoryPageImpl({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HistoryPage(
+          blocClass: HistoryBloc(), platformWidgetTest: PlatformView.MOBILE),
+    );
+  }
+}
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const HistoryPageImpl());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    await tester.pumpAndSettle();
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // // Verify that our counter starts at 0.
+    // expect(find.text('This'), findsOneWidget);
+    expect(find.byKey(const Key('K')), findsOneWidget);
+    // expect(find.text('1'), findsNothing);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // // Tap the '+' icon and trigger a frame.
+    // await tester.tap(find.byIcon(Icons.add));
+    // await tester.pump();
+
+    // // Verify that our counter has incremented.
+    // expect(find.text('0'), findsNothing);
+    // expect(find.text('1'), findsOneWidget);
   });
 }
