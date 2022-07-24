@@ -1,6 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter/foundation.dart';
 
 abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
     extends StatefulWidget {
@@ -14,6 +14,8 @@ abstract class BaseScaffold<T extends StateStreamableSource<Object?>>
   Future<bool> onBackPressed(BuildContext context) async {
     return true;
   }
+
+  void initialize(BuildContext context) {}
 
   @protected
   Widget? bodyScaffold(BuildContext context);
@@ -44,8 +46,10 @@ class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
   @override
   void initState() {
     super.initState();
+
+    widget.initialize(context);
     // widget.mountedBase = mounted;
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     if (kDebugMode) {
       debugPrint("Init State");
     }
@@ -78,7 +82,7 @@ class _BaseScaffoldState<T extends StateStreamableSource<Object?>>
   @override
   void dispose() {
     // widget.mountedBase = mounted;
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     widget.blocClass.close();
     if (kDebugMode) {
       debugPrint("dispose");

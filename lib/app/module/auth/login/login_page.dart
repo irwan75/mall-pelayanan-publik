@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:data/enum/enum_general.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,7 @@ import 'package:shared/const/enum.dart';
 import '../../../base/base_platform_view.dart';
 import '../../../common_widget/button/circular_button.dart';
 import '../../../common_widget/custom_painter/example_shape.dart';
+import '../../../common_widget/selectable_text.dart' as selection;
 import '../../../common_widget/text_form/default_text_field.dart';
 import '../../../general_bloc/cart_counter/cart_counter_cubit.dart';
 import '../../../res/sizes.dart';
@@ -19,9 +22,16 @@ import '../../../res/styles.dart';
 // ignore: must_be_immutable
 class LoginPage extends BaseScaffold<LoginBloc> {
   final PlatformView? platformWidgetTest;
-  const LoginPage(
-      {Key? key, required LoginBloc loginBloc, this.platformWidgetTest})
+  LoginPage({Key? key, required LoginBloc loginBloc, this.platformWidgetTest})
       : super(key: key, blocClass: loginBloc);
+
+  FocusNode myFocusNode = FocusNode(debugLabel: 'Close Backdrop Button');
+
+  @override
+  void initialize(BuildContext context) {
+    super.initialize(context);
+    log(myFocusNode.hasPrimaryFocus.toString());
+  }
 
   @override
   Widget? bodyScaffold(BuildContext context) {
@@ -128,7 +138,20 @@ class LoginPage extends BaseScaffold<LoginBloc> {
                   );
                 },
               ),
-              const Text("Okee siapp"),
+              selection.SelectableText(
+                "Okee siapp",
+                focusNode: myFocusNode,
+              ),
+              const SelectableText("Okee siapp"),
+              const SelectableText("Okee siapp"),
+              const SelectableText("Okee siapp"),
+              const SelectableText("Okee siapp"),
+              IconButton(
+                onPressed: () {
+                  myFocusNode.dispose();
+                },
+                icon: const Icon(Icons.abc),
+              )
             ],
           ),
         ),
