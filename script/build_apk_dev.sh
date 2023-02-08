@@ -1,0 +1,2 @@
+flutter build apk --release -t lib/main_dev.dart --flavor dev --dart-define=GMAPSKEY=AIzaSyBxLTWAuvMsEOWAF090-Ghzjq8tCOdUrWw --dart-define=FIREBASEAPIKEY=AIzaSyCt7lzjJ0Ylh5oaJ43EFqJ3hH3EE0_XpcI --dart-define=FIREBASEAPPID=1:593743149822:android:44955c6e54fca5859703af --dart-define=FIREBASEMSSGID=593743149822 --dart-define=FIREBASEPROJECTID=carryfy-dev --dart-define=FIREBASESTORAGEBUCKET=carryfy-dev.appspot.com --tree-shake-icons --obfuscate --split-debug-info=build/app/outputs/logs -v
+
