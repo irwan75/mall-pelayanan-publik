@@ -1,6 +1,1 @@
-DEFINE_APP_NAME=[Stg] Mall Pelayanan Publik
-DEFINE_APP_SUFFIX=.stg
-FLAVOR=stg
-BASE_URL=https://padichain-api.tcd-dev.id/
-VERSION_CODE=1
-VERSION_NAME=1.0.0
+

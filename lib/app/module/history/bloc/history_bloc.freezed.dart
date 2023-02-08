@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'history_bloc.dart';
 
@@ -12,23 +12,7 @@ part of 'history_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HistoryEventTearOff {
-  const _$HistoryEventTearOff();
-
-  _OnClickHistoryData onClickHistoryData() {
-    return const _OnClickHistoryData();
-  }
-
-  _OnSearch onSearch() {
-    return const _OnSearch();
-  }
-}
-
-/// @nodoc
-const $HistoryEvent = _$HistoryEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$HistoryEvent {
@@ -40,8 +24,8 @@ mixin _$HistoryEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onClickHistoryData,
-    TResult Function()? onSearch,
+    TResult? Function()? onClickHistoryData,
+    TResult? Function()? onSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,8 +43,8 @@ mixin _$HistoryEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnClickHistoryData value)? onClickHistoryData,
-    TResult Function(_OnSearch value)? onSearch,
+    TResult? Function(_OnClickHistoryData value)? onClickHistoryData,
+    TResult? Function(_OnSearch value)? onSearch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,35 +60,34 @@ mixin _$HistoryEvent {
 abstract class $HistoryEventCopyWith<$Res> {
   factory $HistoryEventCopyWith(
           HistoryEvent value, $Res Function(HistoryEvent) then) =
-      _$HistoryEventCopyWithImpl<$Res>;
+      _$HistoryEventCopyWithImpl<$Res, HistoryEvent>;
 }
 
 /// @nodoc
-class _$HistoryEventCopyWithImpl<$Res> implements $HistoryEventCopyWith<$Res> {
+class _$HistoryEventCopyWithImpl<$Res, $Val extends HistoryEvent>
+    implements $HistoryEventCopyWith<$Res> {
   _$HistoryEventCopyWithImpl(this._value, this._then);
 
-  final HistoryEvent _value;
   // ignore: unused_field
-  final $Res Function(HistoryEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$OnClickHistoryDataCopyWith<$Res> {
-  factory _$OnClickHistoryDataCopyWith(
-          _OnClickHistoryData value, $Res Function(_OnClickHistoryData) then) =
-      __$OnClickHistoryDataCopyWithImpl<$Res>;
+abstract class _$$_OnClickHistoryDataCopyWith<$Res> {
+  factory _$$_OnClickHistoryDataCopyWith(_$_OnClickHistoryData value,
+          $Res Function(_$_OnClickHistoryData) then) =
+      __$$_OnClickHistoryDataCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$OnClickHistoryDataCopyWithImpl<$Res>
-    extends _$HistoryEventCopyWithImpl<$Res>
-    implements _$OnClickHistoryDataCopyWith<$Res> {
-  __$OnClickHistoryDataCopyWithImpl(
-      _OnClickHistoryData _value, $Res Function(_OnClickHistoryData) _then)
-      : super(_value, (v) => _then(v as _OnClickHistoryData));
-
-  @override
-  _OnClickHistoryData get _value => super._value as _OnClickHistoryData;
+class __$$_OnClickHistoryDataCopyWithImpl<$Res>
+    extends _$HistoryEventCopyWithImpl<$Res, _$_OnClickHistoryData>
+    implements _$$_OnClickHistoryDataCopyWith<$Res> {
+  __$$_OnClickHistoryDataCopyWithImpl(
+      _$_OnClickHistoryData _value, $Res Function(_$_OnClickHistoryData) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -120,7 +103,7 @@ class _$_OnClickHistoryData implements _OnClickHistoryData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _OnClickHistoryData);
+        (other.runtimeType == runtimeType && other is _$_OnClickHistoryData);
   }
 
   @override
@@ -138,8 +121,8 @@ class _$_OnClickHistoryData implements _OnClickHistoryData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onClickHistoryData,
-    TResult Function()? onSearch,
+    TResult? Function()? onClickHistoryData,
+    TResult? Function()? onSearch,
   }) {
     return onClickHistoryData?.call();
   }
@@ -169,8 +152,8 @@ class _$_OnClickHistoryData implements _OnClickHistoryData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnClickHistoryData value)? onClickHistoryData,
-    TResult Function(_OnSearch value)? onSearch,
+    TResult? Function(_OnClickHistoryData value)? onClickHistoryData,
+    TResult? Function(_OnSearch value)? onSearch,
   }) {
     return onClickHistoryData?.call(this);
   }
@@ -194,19 +177,19 @@ abstract class _OnClickHistoryData implements HistoryEvent {
 }
 
 /// @nodoc
-abstract class _$OnSearchCopyWith<$Res> {
-  factory _$OnSearchCopyWith(_OnSearch value, $Res Function(_OnSearch) then) =
-      __$OnSearchCopyWithImpl<$Res>;
+abstract class _$$_OnSearchCopyWith<$Res> {
+  factory _$$_OnSearchCopyWith(
+          _$_OnSearch value, $Res Function(_$_OnSearch) then) =
+      __$$_OnSearchCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$OnSearchCopyWithImpl<$Res> extends _$HistoryEventCopyWithImpl<$Res>
-    implements _$OnSearchCopyWith<$Res> {
-  __$OnSearchCopyWithImpl(_OnSearch _value, $Res Function(_OnSearch) _then)
-      : super(_value, (v) => _then(v as _OnSearch));
-
-  @override
-  _OnSearch get _value => super._value as _OnSearch;
+class __$$_OnSearchCopyWithImpl<$Res>
+    extends _$HistoryEventCopyWithImpl<$Res, _$_OnSearch>
+    implements _$$_OnSearchCopyWith<$Res> {
+  __$$_OnSearchCopyWithImpl(
+      _$_OnSearch _value, $Res Function(_$_OnSearch) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -222,7 +205,7 @@ class _$_OnSearch implements _OnSearch {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _OnSearch);
+        (other.runtimeType == runtimeType && other is _$_OnSearch);
   }
 
   @override
@@ -240,8 +223,8 @@ class _$_OnSearch implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? onClickHistoryData,
-    TResult Function()? onSearch,
+    TResult? Function()? onClickHistoryData,
+    TResult? Function()? onSearch,
   }) {
     return onSearch?.call();
   }
@@ -271,8 +254,8 @@ class _$_OnSearch implements _OnSearch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnClickHistoryData value)? onClickHistoryData,
-    TResult Function(_OnSearch value)? onSearch,
+    TResult? Function(_OnClickHistoryData value)? onClickHistoryData,
+    TResult? Function(_OnSearch value)? onSearch,
   }) {
     return onSearch?.call(this);
   }
@@ -296,38 +279,6 @@ abstract class _OnSearch implements HistoryEvent {
 }
 
 /// @nodoc
-class _$HistoryStateTearOff {
-  const _$HistoryStateTearOff();
-
-  _HasData hasData() {
-    return const _HasData();
-  }
-
-  _Loading loading() {
-    return const _Loading();
-  }
-
-  _NoData noData() {
-    return const _NoData();
-  }
-
-  _Failure failure(String message) {
-    return _Failure(
-      message,
-    );
-  }
-
-  _NoInternetConnection noInternetConnection(String message) {
-    return _NoInternetConnection(
-      message,
-    );
-  }
-}
-
-/// @nodoc
-const $HistoryState = _$HistoryStateTearOff();
-
-/// @nodoc
 mixin _$HistoryState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -340,11 +291,11 @@ mixin _$HistoryState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hasData,
-    TResult Function()? loading,
-    TResult Function()? noData,
-    TResult Function(String message)? failure,
-    TResult Function(String message)? noInternetConnection,
+    TResult? Function()? hasData,
+    TResult? Function()? loading,
+    TResult? Function()? noData,
+    TResult? Function(String message)? failure,
+    TResult? Function(String message)? noInternetConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -368,11 +319,11 @@ mixin _$HistoryState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_HasData value)? hasData,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_HasData value)? hasData,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_NoInternetConnection value)? noInternetConnection,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -391,32 +342,33 @@ mixin _$HistoryState {
 abstract class $HistoryStateCopyWith<$Res> {
   factory $HistoryStateCopyWith(
           HistoryState value, $Res Function(HistoryState) then) =
-      _$HistoryStateCopyWithImpl<$Res>;
+      _$HistoryStateCopyWithImpl<$Res, HistoryState>;
 }
 
 /// @nodoc
-class _$HistoryStateCopyWithImpl<$Res> implements $HistoryStateCopyWith<$Res> {
+class _$HistoryStateCopyWithImpl<$Res, $Val extends HistoryState>
+    implements $HistoryStateCopyWith<$Res> {
   _$HistoryStateCopyWithImpl(this._value, this._then);
 
-  final HistoryState _value;
   // ignore: unused_field
-  final $Res Function(HistoryState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$HasDataCopyWith<$Res> {
-  factory _$HasDataCopyWith(_HasData value, $Res Function(_HasData) then) =
-      __$HasDataCopyWithImpl<$Res>;
+abstract class _$$_HasDataCopyWith<$Res> {
+  factory _$$_HasDataCopyWith(
+          _$_HasData value, $Res Function(_$_HasData) then) =
+      __$$_HasDataCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$HasDataCopyWithImpl<$Res> extends _$HistoryStateCopyWithImpl<$Res>
-    implements _$HasDataCopyWith<$Res> {
-  __$HasDataCopyWithImpl(_HasData _value, $Res Function(_HasData) _then)
-      : super(_value, (v) => _then(v as _HasData));
-
-  @override
-  _HasData get _value => super._value as _HasData;
+class __$$_HasDataCopyWithImpl<$Res>
+    extends _$HistoryStateCopyWithImpl<$Res, _$_HasData>
+    implements _$$_HasDataCopyWith<$Res> {
+  __$$_HasDataCopyWithImpl(_$_HasData _value, $Res Function(_$_HasData) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -432,7 +384,7 @@ class _$_HasData implements _HasData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _HasData);
+        (other.runtimeType == runtimeType && other is _$_HasData);
   }
 
   @override
@@ -453,11 +405,11 @@ class _$_HasData implements _HasData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hasData,
-    TResult Function()? loading,
-    TResult Function()? noData,
-    TResult Function(String message)? failure,
-    TResult Function(String message)? noInternetConnection,
+    TResult? Function()? hasData,
+    TResult? Function()? loading,
+    TResult? Function()? noData,
+    TResult? Function(String message)? failure,
+    TResult? Function(String message)? noInternetConnection,
   }) {
     return hasData?.call();
   }
@@ -493,11 +445,11 @@ class _$_HasData implements _HasData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_HasData value)? hasData,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_HasData value)? hasData,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_NoInternetConnection value)? noInternetConnection,
   }) {
     return hasData?.call(this);
   }
@@ -524,19 +476,18 @@ abstract class _HasData implements HistoryState {
 }
 
 /// @nodoc
-abstract class _$LoadingCopyWith<$Res> {
-  factory _$LoadingCopyWith(_Loading value, $Res Function(_Loading) then) =
-      __$LoadingCopyWithImpl<$Res>;
+abstract class _$$_LoadingCopyWith<$Res> {
+  factory _$$_LoadingCopyWith(
+          _$_Loading value, $Res Function(_$_Loading) then) =
+      __$$_LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$LoadingCopyWithImpl<$Res> extends _$HistoryStateCopyWithImpl<$Res>
-    implements _$LoadingCopyWith<$Res> {
-  __$LoadingCopyWithImpl(_Loading _value, $Res Function(_Loading) _then)
-      : super(_value, (v) => _then(v as _Loading));
-
-  @override
-  _Loading get _value => super._value as _Loading;
+class __$$_LoadingCopyWithImpl<$Res>
+    extends _$HistoryStateCopyWithImpl<$Res, _$_Loading>
+    implements _$$_LoadingCopyWith<$Res> {
+  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -552,7 +503,7 @@ class _$_Loading implements _Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Loading);
+        (other.runtimeType == runtimeType && other is _$_Loading);
   }
 
   @override
@@ -573,11 +524,11 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hasData,
-    TResult Function()? loading,
-    TResult Function()? noData,
-    TResult Function(String message)? failure,
-    TResult Function(String message)? noInternetConnection,
+    TResult? Function()? hasData,
+    TResult? Function()? loading,
+    TResult? Function()? noData,
+    TResult? Function(String message)? failure,
+    TResult? Function(String message)? noInternetConnection,
   }) {
     return loading?.call();
   }
@@ -613,11 +564,11 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_HasData value)? hasData,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_HasData value)? hasData,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_NoInternetConnection value)? noInternetConnection,
   }) {
     return loading?.call(this);
   }
@@ -644,19 +595,17 @@ abstract class _Loading implements HistoryState {
 }
 
 /// @nodoc
-abstract class _$NoDataCopyWith<$Res> {
-  factory _$NoDataCopyWith(_NoData value, $Res Function(_NoData) then) =
-      __$NoDataCopyWithImpl<$Res>;
+abstract class _$$_NoDataCopyWith<$Res> {
+  factory _$$_NoDataCopyWith(_$_NoData value, $Res Function(_$_NoData) then) =
+      __$$_NoDataCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$NoDataCopyWithImpl<$Res> extends _$HistoryStateCopyWithImpl<$Res>
-    implements _$NoDataCopyWith<$Res> {
-  __$NoDataCopyWithImpl(_NoData _value, $Res Function(_NoData) _then)
-      : super(_value, (v) => _then(v as _NoData));
-
-  @override
-  _NoData get _value => super._value as _NoData;
+class __$$_NoDataCopyWithImpl<$Res>
+    extends _$HistoryStateCopyWithImpl<$Res, _$_NoData>
+    implements _$$_NoDataCopyWith<$Res> {
+  __$$_NoDataCopyWithImpl(_$_NoData _value, $Res Function(_$_NoData) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -672,7 +621,7 @@ class _$_NoData implements _NoData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _NoData);
+        (other.runtimeType == runtimeType && other is _$_NoData);
   }
 
   @override
@@ -693,11 +642,11 @@ class _$_NoData implements _NoData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hasData,
-    TResult Function()? loading,
-    TResult Function()? noData,
-    TResult Function(String message)? failure,
-    TResult Function(String message)? noInternetConnection,
+    TResult? Function()? hasData,
+    TResult? Function()? loading,
+    TResult? Function()? noData,
+    TResult? Function(String message)? failure,
+    TResult? Function(String message)? noInternetConnection,
   }) {
     return noData?.call();
   }
@@ -733,11 +682,11 @@ class _$_NoData implements _NoData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_HasData value)? hasData,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_HasData value)? hasData,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_NoInternetConnection value)? noInternetConnection,
   }) {
     return noData?.call(this);
   }
@@ -764,27 +713,28 @@ abstract class _NoData implements HistoryState {
 }
 
 /// @nodoc
-abstract class _$FailureCopyWith<$Res> {
-  factory _$FailureCopyWith(_Failure value, $Res Function(_Failure) then) =
-      __$FailureCopyWithImpl<$Res>;
+abstract class _$$_FailureCopyWith<$Res> {
+  factory _$$_FailureCopyWith(
+          _$_Failure value, $Res Function(_$_Failure) then) =
+      __$$_FailureCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$FailureCopyWithImpl<$Res> extends _$HistoryStateCopyWithImpl<$Res>
-    implements _$FailureCopyWith<$Res> {
-  __$FailureCopyWithImpl(_Failure _value, $Res Function(_Failure) _then)
-      : super(_value, (v) => _then(v as _Failure));
+class __$$_FailureCopyWithImpl<$Res>
+    extends _$HistoryStateCopyWithImpl<$Res, _$_Failure>
+    implements _$$_FailureCopyWith<$Res> {
+  __$$_FailureCopyWithImpl(_$_Failure _value, $Res Function(_$_Failure) _then)
+      : super(_value, _then);
 
-  @override
-  _Failure get _value => super._value as _Failure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(_Failure(
-      message == freezed
+    return _then(_$_Failure(
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -809,18 +759,18 @@ class _$_Failure implements _Failure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Failure &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$_Failure &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  _$FailureCopyWith<_Failure> get copyWith =>
-      __$FailureCopyWithImpl<_Failure>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FailureCopyWith<_$_Failure> get copyWith =>
+      __$$_FailureCopyWithImpl<_$_Failure>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -837,11 +787,11 @@ class _$_Failure implements _Failure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hasData,
-    TResult Function()? loading,
-    TResult Function()? noData,
-    TResult Function(String message)? failure,
-    TResult Function(String message)? noInternetConnection,
+    TResult? Function()? hasData,
+    TResult? Function()? loading,
+    TResult? Function()? noData,
+    TResult? Function(String message)? failure,
+    TResult? Function(String message)? noInternetConnection,
   }) {
     return failure?.call(message);
   }
@@ -877,11 +827,11 @@ class _$_Failure implements _Failure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_HasData value)? hasData,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_HasData value)? hasData,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_NoInternetConnection value)? noInternetConnection,
   }) {
     return failure?.call(this);
   }
@@ -904,39 +854,38 @@ class _$_Failure implements _Failure {
 }
 
 abstract class _Failure implements HistoryState {
-  const factory _Failure(String message) = _$_Failure;
+  const factory _Failure(final String message) = _$_Failure;
 
   String get message;
   @JsonKey(ignore: true)
-  _$FailureCopyWith<_Failure> get copyWith =>
+  _$$_FailureCopyWith<_$_Failure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$NoInternetConnectionCopyWith<$Res> {
-  factory _$NoInternetConnectionCopyWith(_NoInternetConnection value,
-          $Res Function(_NoInternetConnection) then) =
-      __$NoInternetConnectionCopyWithImpl<$Res>;
+abstract class _$$_NoInternetConnectionCopyWith<$Res> {
+  factory _$$_NoInternetConnectionCopyWith(_$_NoInternetConnection value,
+          $Res Function(_$_NoInternetConnection) then) =
+      __$$_NoInternetConnectionCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$NoInternetConnectionCopyWithImpl<$Res>
-    extends _$HistoryStateCopyWithImpl<$Res>
-    implements _$NoInternetConnectionCopyWith<$Res> {
-  __$NoInternetConnectionCopyWithImpl(
-      _NoInternetConnection _value, $Res Function(_NoInternetConnection) _then)
-      : super(_value, (v) => _then(v as _NoInternetConnection));
+class __$$_NoInternetConnectionCopyWithImpl<$Res>
+    extends _$HistoryStateCopyWithImpl<$Res, _$_NoInternetConnection>
+    implements _$$_NoInternetConnectionCopyWith<$Res> {
+  __$$_NoInternetConnectionCopyWithImpl(_$_NoInternetConnection _value,
+      $Res Function(_$_NoInternetConnection) _then)
+      : super(_value, _then);
 
-  @override
-  _NoInternetConnection get _value => super._value as _NoInternetConnection;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(_NoInternetConnection(
-      message == freezed
+    return _then(_$_NoInternetConnection(
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -961,18 +910,18 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _NoInternetConnection &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$_NoInternetConnection &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  _$NoInternetConnectionCopyWith<_NoInternetConnection> get copyWith =>
-      __$NoInternetConnectionCopyWithImpl<_NoInternetConnection>(
+  @pragma('vm:prefer-inline')
+  _$$_NoInternetConnectionCopyWith<_$_NoInternetConnection> get copyWith =>
+      __$$_NoInternetConnectionCopyWithImpl<_$_NoInternetConnection>(
           this, _$identity);
 
   @override
@@ -990,11 +939,11 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hasData,
-    TResult Function()? loading,
-    TResult Function()? noData,
-    TResult Function(String message)? failure,
-    TResult Function(String message)? noInternetConnection,
+    TResult? Function()? hasData,
+    TResult? Function()? loading,
+    TResult? Function()? noData,
+    TResult? Function(String message)? failure,
+    TResult? Function(String message)? noInternetConnection,
   }) {
     return noInternetConnection?.call(message);
   }
@@ -1030,11 +979,11 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_HasData value)? hasData,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_HasData value)? hasData,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Failure value)? failure,
+    TResult? Function(_NoInternetConnection value)? noInternetConnection,
   }) {
     return noInternetConnection?.call(this);
   }
@@ -1057,10 +1006,11 @@ class _$_NoInternetConnection implements _NoInternetConnection {
 }
 
 abstract class _NoInternetConnection implements HistoryState {
-  const factory _NoInternetConnection(String message) = _$_NoInternetConnection;
+  const factory _NoInternetConnection(final String message) =
+      _$_NoInternetConnection;
 
   String get message;
   @JsonKey(ignore: true)
-  _$NoInternetConnectionCopyWith<_NoInternetConnection> get copyWith =>
+  _$$_NoInternetConnectionCopyWith<_$_NoInternetConnection> get copyWith =>
       throw _privateConstructorUsedError;
 }

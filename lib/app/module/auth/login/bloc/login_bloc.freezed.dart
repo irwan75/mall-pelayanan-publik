@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'login_bloc.dart';
 
@@ -12,32 +12,11 @@ part of 'login_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$LoginEventTearOff {
-  const _$LoginEventTearOff();
-
-  _OnClickLogin onClickLogin(BuildContext context) {
-    return _OnClickLogin(
-      context,
-    );
-  }
-
-  _OnClickRegister onClickRegister(BuildContext context) {
-    return _OnClickRegister(
-      context,
-    );
-  }
-}
-
-/// @nodoc
-const $LoginEvent = _$LoginEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$LoginEvent {
   BuildContext get context => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuildContext context) onClickLogin,
@@ -46,8 +25,8 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BuildContext context)? onClickLogin,
-    TResult Function(BuildContext context)? onClickRegister,
+    TResult? Function(BuildContext context)? onClickLogin,
+    TResult? Function(BuildContext context)? onClickRegister,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,8 +44,8 @@ mixin _$LoginEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnClickLogin value)? onClickLogin,
-    TResult Function(_OnClickRegister value)? onClickRegister,
+    TResult? Function(_OnClickLogin value)? onClickLogin,
+    TResult? Function(_OnClickRegister value)? onClickRegister,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -86,57 +65,61 @@ mixin _$LoginEvent {
 abstract class $LoginEventCopyWith<$Res> {
   factory $LoginEventCopyWith(
           LoginEvent value, $Res Function(LoginEvent) then) =
-      _$LoginEventCopyWithImpl<$Res>;
+      _$LoginEventCopyWithImpl<$Res, LoginEvent>;
+  @useResult
   $Res call({BuildContext context});
 }
 
 /// @nodoc
-class _$LoginEventCopyWithImpl<$Res> implements $LoginEventCopyWith<$Res> {
+class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
+    implements $LoginEventCopyWith<$Res> {
   _$LoginEventCopyWithImpl(this._value, this._then);
 
-  final LoginEvent _value;
   // ignore: unused_field
-  final $Res Function(LoginEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? context = freezed,
+    Object? context = null,
   }) {
     return _then(_value.copyWith(
-      context: context == freezed
+      context: null == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as BuildContext,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$OnClickLoginCopyWith<$Res>
+abstract class _$$_OnClickLoginCopyWith<$Res>
     implements $LoginEventCopyWith<$Res> {
-  factory _$OnClickLoginCopyWith(
-          _OnClickLogin value, $Res Function(_OnClickLogin) then) =
-      __$OnClickLoginCopyWithImpl<$Res>;
+  factory _$$_OnClickLoginCopyWith(
+          _$_OnClickLogin value, $Res Function(_$_OnClickLogin) then) =
+      __$$_OnClickLoginCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({BuildContext context});
 }
 
 /// @nodoc
-class __$OnClickLoginCopyWithImpl<$Res> extends _$LoginEventCopyWithImpl<$Res>
-    implements _$OnClickLoginCopyWith<$Res> {
-  __$OnClickLoginCopyWithImpl(
-      _OnClickLogin _value, $Res Function(_OnClickLogin) _then)
-      : super(_value, (v) => _then(v as _OnClickLogin));
+class __$$_OnClickLoginCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$_OnClickLogin>
+    implements _$$_OnClickLoginCopyWith<$Res> {
+  __$$_OnClickLoginCopyWithImpl(
+      _$_OnClickLogin _value, $Res Function(_$_OnClickLogin) _then)
+      : super(_value, _then);
 
-  @override
-  _OnClickLogin get _value => super._value as _OnClickLogin;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? context = freezed,
+    Object? context = null,
   }) {
-    return _then(_OnClickLogin(
-      context == freezed
+    return _then(_$_OnClickLogin(
+      null == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as BuildContext,
@@ -161,18 +144,18 @@ class _$_OnClickLogin implements _OnClickLogin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OnClickLogin &&
-            const DeepCollectionEquality().equals(other.context, context));
+            other is _$_OnClickLogin &&
+            (identical(other.context, context) || other.context == context));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(context));
+  int get hashCode => Object.hash(runtimeType, context);
 
   @JsonKey(ignore: true)
   @override
-  _$OnClickLoginCopyWith<_OnClickLogin> get copyWith =>
-      __$OnClickLoginCopyWithImpl<_OnClickLogin>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_OnClickLoginCopyWith<_$_OnClickLogin> get copyWith =>
+      __$$_OnClickLoginCopyWithImpl<_$_OnClickLogin>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -186,8 +169,8 @@ class _$_OnClickLogin implements _OnClickLogin {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BuildContext context)? onClickLogin,
-    TResult Function(BuildContext context)? onClickRegister,
+    TResult? Function(BuildContext context)? onClickLogin,
+    TResult? Function(BuildContext context)? onClickRegister,
   }) {
     return onClickLogin?.call(context);
   }
@@ -217,8 +200,8 @@ class _$_OnClickLogin implements _OnClickLogin {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnClickLogin value)? onClickLogin,
-    TResult Function(_OnClickRegister value)? onClickRegister,
+    TResult? Function(_OnClickLogin value)? onClickLogin,
+    TResult? Function(_OnClickRegister value)? onClickRegister,
   }) {
     return onClickLogin?.call(this);
   }
@@ -238,43 +221,42 @@ class _$_OnClickLogin implements _OnClickLogin {
 }
 
 abstract class _OnClickLogin implements LoginEvent {
-  const factory _OnClickLogin(BuildContext context) = _$_OnClickLogin;
+  const factory _OnClickLogin(final BuildContext context) = _$_OnClickLogin;
 
   @override
   BuildContext get context;
   @override
   @JsonKey(ignore: true)
-  _$OnClickLoginCopyWith<_OnClickLogin> get copyWith =>
+  _$$_OnClickLoginCopyWith<_$_OnClickLogin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$OnClickRegisterCopyWith<$Res>
+abstract class _$$_OnClickRegisterCopyWith<$Res>
     implements $LoginEventCopyWith<$Res> {
-  factory _$OnClickRegisterCopyWith(
-          _OnClickRegister value, $Res Function(_OnClickRegister) then) =
-      __$OnClickRegisterCopyWithImpl<$Res>;
+  factory _$$_OnClickRegisterCopyWith(
+          _$_OnClickRegister value, $Res Function(_$_OnClickRegister) then) =
+      __$$_OnClickRegisterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({BuildContext context});
 }
 
 /// @nodoc
-class __$OnClickRegisterCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res>
-    implements _$OnClickRegisterCopyWith<$Res> {
-  __$OnClickRegisterCopyWithImpl(
-      _OnClickRegister _value, $Res Function(_OnClickRegister) _then)
-      : super(_value, (v) => _then(v as _OnClickRegister));
+class __$$_OnClickRegisterCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$_OnClickRegister>
+    implements _$$_OnClickRegisterCopyWith<$Res> {
+  __$$_OnClickRegisterCopyWithImpl(
+      _$_OnClickRegister _value, $Res Function(_$_OnClickRegister) _then)
+      : super(_value, _then);
 
-  @override
-  _OnClickRegister get _value => super._value as _OnClickRegister;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? context = freezed,
+    Object? context = null,
   }) {
-    return _then(_OnClickRegister(
-      context == freezed
+    return _then(_$_OnClickRegister(
+      null == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as BuildContext,
@@ -299,18 +281,18 @@ class _$_OnClickRegister implements _OnClickRegister {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _OnClickRegister &&
-            const DeepCollectionEquality().equals(other.context, context));
+            other is _$_OnClickRegister &&
+            (identical(other.context, context) || other.context == context));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(context));
+  int get hashCode => Object.hash(runtimeType, context);
 
   @JsonKey(ignore: true)
   @override
-  _$OnClickRegisterCopyWith<_OnClickRegister> get copyWith =>
-      __$OnClickRegisterCopyWithImpl<_OnClickRegister>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_OnClickRegisterCopyWith<_$_OnClickRegister> get copyWith =>
+      __$$_OnClickRegisterCopyWithImpl<_$_OnClickRegister>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -324,8 +306,8 @@ class _$_OnClickRegister implements _OnClickRegister {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BuildContext context)? onClickLogin,
-    TResult Function(BuildContext context)? onClickRegister,
+    TResult? Function(BuildContext context)? onClickLogin,
+    TResult? Function(BuildContext context)? onClickRegister,
   }) {
     return onClickRegister?.call(context);
   }
@@ -355,8 +337,8 @@ class _$_OnClickRegister implements _OnClickRegister {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_OnClickLogin value)? onClickLogin,
-    TResult Function(_OnClickRegister value)? onClickRegister,
+    TResult? Function(_OnClickLogin value)? onClickLogin,
+    TResult? Function(_OnClickRegister value)? onClickRegister,
   }) {
     return onClickRegister?.call(this);
   }
@@ -376,35 +358,16 @@ class _$_OnClickRegister implements _OnClickRegister {
 }
 
 abstract class _OnClickRegister implements LoginEvent {
-  const factory _OnClickRegister(BuildContext context) = _$_OnClickRegister;
+  const factory _OnClickRegister(final BuildContext context) =
+      _$_OnClickRegister;
 
   @override
   BuildContext get context;
   @override
   @JsonKey(ignore: true)
-  _$OnClickRegisterCopyWith<_OnClickRegister> get copyWith =>
+  _$$_OnClickRegisterCopyWith<_$_OnClickRegister> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$LoginStateTearOff {
-  const _$LoginStateTearOff();
-
-  _Initial initial(int? value) {
-    return _Initial(
-      value,
-    );
-  }
-
-  _Failure failure(String? message) {
-    return _Failure(
-      message,
-    );
-  }
-}
-
-/// @nodoc
-const $LoginState = _$LoginStateTearOff();
 
 /// @nodoc
 mixin _$LoginState {
@@ -416,8 +379,8 @@ mixin _$LoginState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int? value)? initial,
-    TResult Function(String? message)? failure,
+    TResult? Function(int? value)? initial,
+    TResult? Function(String? message)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -435,8 +398,8 @@ mixin _$LoginState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Failure value)? failure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Failure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -452,40 +415,43 @@ mixin _$LoginState {
 abstract class $LoginStateCopyWith<$Res> {
   factory $LoginStateCopyWith(
           LoginState value, $Res Function(LoginState) then) =
-      _$LoginStateCopyWithImpl<$Res>;
+      _$LoginStateCopyWithImpl<$Res, LoginState>;
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<$Res> implements $LoginStateCopyWith<$Res> {
+class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
+    implements $LoginStateCopyWith<$Res> {
   _$LoginStateCopyWithImpl(this._value, this._then);
 
-  final LoginState _value;
   // ignore: unused_field
-  final $Res Function(LoginState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
+  @useResult
   $Res call({int? value});
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, _then);
 
-  @override
-  _Initial get _value => super._value as _Initial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = freezed,
   }) {
-    return _then(_Initial(
-      value == freezed
+    return _then(_$_Initial(
+      freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -510,18 +476,18 @@ class _$_Initial implements _Initial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Initial &&
-            const DeepCollectionEquality().equals(other.value, value));
+            other is _$_Initial &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  _$InitialCopyWith<_Initial> get copyWith =>
-      __$InitialCopyWithImpl<_Initial>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
+      __$$_InitialCopyWithImpl<_$_Initial>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -535,8 +501,8 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int? value)? initial,
-    TResult Function(String? message)? failure,
+    TResult? Function(int? value)? initial,
+    TResult? Function(String? message)? failure,
   }) {
     return initial?.call(value);
   }
@@ -566,8 +532,8 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Failure value)? failure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Failure value)? failure,
   }) {
     return initial?.call(this);
   }
@@ -587,36 +553,37 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements LoginState {
-  const factory _Initial(int? value) = _$_Initial;
+  const factory _Initial(final int? value) = _$_Initial;
 
   int? get value;
   @JsonKey(ignore: true)
-  _$InitialCopyWith<_Initial> get copyWith =>
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FailureCopyWith<$Res> {
-  factory _$FailureCopyWith(_Failure value, $Res Function(_Failure) then) =
-      __$FailureCopyWithImpl<$Res>;
+abstract class _$$_FailureCopyWith<$Res> {
+  factory _$$_FailureCopyWith(
+          _$_Failure value, $Res Function(_$_Failure) then) =
+      __$$_FailureCopyWithImpl<$Res>;
+  @useResult
   $Res call({String? message});
 }
 
 /// @nodoc
-class __$FailureCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
-    implements _$FailureCopyWith<$Res> {
-  __$FailureCopyWithImpl(_Failure _value, $Res Function(_Failure) _then)
-      : super(_value, (v) => _then(v as _Failure));
+class __$$_FailureCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$_Failure>
+    implements _$$_FailureCopyWith<$Res> {
+  __$$_FailureCopyWithImpl(_$_Failure _value, $Res Function(_$_Failure) _then)
+      : super(_value, _then);
 
-  @override
-  _Failure get _value => super._value as _Failure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(_Failure(
-      message == freezed
+    return _then(_$_Failure(
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -641,18 +608,18 @@ class _$_Failure implements _Failure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Failure &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$_Failure &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  _$FailureCopyWith<_Failure> get copyWith =>
-      __$FailureCopyWithImpl<_Failure>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FailureCopyWith<_$_Failure> get copyWith =>
+      __$$_FailureCopyWithImpl<_$_Failure>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -666,8 +633,8 @@ class _$_Failure implements _Failure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int? value)? initial,
-    TResult Function(String? message)? failure,
+    TResult? Function(int? value)? initial,
+    TResult? Function(String? message)? failure,
   }) {
     return failure?.call(message);
   }
@@ -697,8 +664,8 @@ class _$_Failure implements _Failure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Failure value)? failure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Failure value)? failure,
   }) {
     return failure?.call(this);
   }
@@ -718,10 +685,10 @@ class _$_Failure implements _Failure {
 }
 
 abstract class _Failure implements LoginState {
-  const factory _Failure(String? message) = _$_Failure;
+  const factory _Failure(final String? message) = _$_Failure;
 
   String? get message;
   @JsonKey(ignore: true)
-  _$FailureCopyWith<_Failure> get copyWith =>
+  _$$_FailureCopyWith<_$_Failure> get copyWith =>
       throw _privateConstructorUsedError;
 }
