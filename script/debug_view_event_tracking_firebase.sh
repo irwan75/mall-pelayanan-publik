@@ -1,0 +1,1 @@
+adb shell setprop debug.firebase.analytics.app my.maukerja.applicant.lite

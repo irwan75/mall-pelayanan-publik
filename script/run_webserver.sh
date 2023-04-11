@@ -1,0 +1,1 @@
+flutter run -d web-server --dart-define=URL=https://api.commodity.tcd-dev.id --web-port 8080 --web-hostname 0.0.0.0 --web-renderer canvaskit
